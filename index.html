@@ -81,28 +81,30 @@
                 <kbd id="/" class="kbd w-[55px] h-[52px]">/</kbd>
               </div>
         </div>
-        <div class="flex justify-between">
-            <button class="btn rounded-full bg-[#894189] hover:bg-[#894189] px-9">
+        <div class="flex justify-between ">
+            <button class="btn rounded-full bg-[#894189] hover:bg-[#894189] px-9 text-white">
                 Life
                 <img src="images/heart.svg" alt="">
-                <span>1</span>
+                <span id="life">3</span>
             </button>
-            <button class="btn rounded-full bg-[#360490] hover:bg-[#360490] px-9">
+            <button class="btn rounded-full bg-[#360490] hover:bg-[#360490] px-9 text-white">
                 Score
                 <img src="images/dollar.svg" alt="">
-                <span>1</span>
+                <span class="score-val">0</span>
             </button>
         </div>
     </section>
   <!-- score -->
-    <section class="text-center absolute hidden ">
+    <section class="text-center absolute hidden " id="score">
         <div class="py-11 px-5 text-center border-[1px] border-[#FFFFFF33] rounded-lg space-y-4 text-white  bg-gradient-to-r from-[#FFFFFF8F] from-0% to-[#98979700] to-100%">
-            <h1 class="font-poppins text-6xl font-extrabold ">Score <span class="font-bold">:</span> <span class="font-semibold">14</span></h1>
-            <button onclick="play()" class="btn bg-white font-poppins text-black font-semibold px-8  rounded-md hover:bg-slate-400 border-none">Play Now</button>
+            <h1 class="text-4xl">Game Over!</h1>
+            <h1 class="font-poppins text-6xl font-extrabold ">Score <span class="font-bold">:</span> <span class="font-semibold score-val">0</span></h1>
+            <button onclick="playAgain()" class="btn bg-white font-poppins text-black font-semibold px-8  rounded-md hover:bg-slate-400 border-none">Play Again</button>
             <p class="text-xl font-medium">Practice will make you Pro</p>
         </div>
     </section>
 </main>
+<script src="utility.js"></script>
 <script src="alpha-clash.js"></script>
 
 </body>
