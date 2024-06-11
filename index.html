@@ -1,11 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alpha Clash</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font anton -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <!-- font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- font inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
-    
+    <main class=" bg-black relative flex justify-center items-center">
+        <div class="w-1/2  mx-auto">
+            <img src="images/background.png" class="h-[100vh] w-full" alt="">
+        </div>
+    <!-- Home -->
+    <section id="home" class="text-center absolute " > 
+        <div >
+            <h1 class="text-[170px] font-anton text-white font-normal">ALPHA CLASH PRO</h1>
+            <p class="text-2xl text-white font-poppins  font-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+            <button onclick="play()" class="btn bg-white font-poppins text-black font-semibold px-8 mt-8 rounded-md hover:bg-slate-400">Play Now</button>
+        </div>
+
+    </section>
+    <!-- Playground -->
+    <section id="playground" class="text-center absolute w-[75%] space-y-8 hidden ">
+        <div class="relative flex  justify-center">
+            <div class="py-16 bg-[#FFFFFFB3] border-[20px] border-[#010313CC] rounded-2xl w-full">
+                <h1 id="play-screen" class="text-8xl font-semibold text-black"></h1>
+            </div>
+            <div class="py-3 w-[40%] bg-[#2F2941] rounded-bl-xl rounded-br-xl absolute text-white ">
+                <p>Don't watch keyboard  while playing...</p>
+            </div>
+           
+        </div>
+        <div class="font-inter text-lg">
+            <div class="flex justify-center gap-1 my-1 w-full text-center ">
+                <kbd id="q" class="kbd w-[55px] h-[52px] ">q</kbd>
+                <kbd id="w" class="kbd w-[55px] h-[52px] ">w</kbd>
+                <kbd id="e" class="kbd w-[55px] h-[52px] ">e</kbd>
+                <kbd id="r" class="kbd w-[55px] h-[52px] ">r</kbd>
+                <kbd id="t" class="kbd w-[55px] h-[52px] ">t</kbd>
+                <kbd id="y" class="kbd w-[55px] h-[52px] ">y</kbd>
+                <kbd id="u" class="kbd w-[55px] h-[52px] ">u</kbd>
+                <kbd id="i" class="kbd w-[55px] h-[52px] ">i</kbd>
+                <kbd id="o" class="kbd w-[55px] h-[52px] ">o</kbd>
+                <kbd id="p" class="kbd w-[55px] h-[52px] ">p</kbd>
+              </div> 
+              <div class="flex justify-center gap-1 my-1 w-full">
+                <kbd id="a" class="kbd w-[55px] h-[52px]">a</kbd>
+                <kbd id="s" class="kbd w-[55px] h-[52px]">s</kbd>
+                <kbd id="d" class="kbd w-[55px] h-[52px]">d</kbd>
+                <kbd id="f" class="kbd w-[55px] h-[52px]">f</kbd>
+                <kbd id="g" class="kbd w-[55px] h-[52px]">g</kbd>
+                <kbd id="h" class="kbd w-[55px] h-[52px]">h</kbd>
+                <kbd id="j" class="kbd w-[55px] h-[52px]">j</kbd>
+                <kbd id="k" class="kbd w-[55px] h-[52px]">k</kbd>
+                <kbd id="l" class="kbd w-[55px] h-[52px]">l</kbd>
+              </div> 
+              <div class="flex justify-center gap-1 my-1 w-full">
+                <kbd id="z" class="kbd w-[55px] h-[52px]">z</kbd>
+                <kbd id="x" class="kbd w-[55px] h-[52px]">x</kbd>
+                <kbd id="c" class="kbd w-[55px] h-[52px]">c</kbd>
+                <kbd id="v" class="kbd w-[55px] h-[52px]">v</kbd>
+                <kbd id="b" class="kbd w-[55px] h-[52px]">b</kbd>
+                <kbd id="n" class="kbd w-[55px] h-[52px]">n</kbd>
+                <kbd id="m" class="kbd w-[55px] h-[52px]">m</kbd>
+                <kbd id="/" class="kbd w-[55px] h-[52px]">/</kbd>
+              </div>
+        </div>
+        <div class="flex justify-between">
+            <button class="btn rounded-full bg-[#894189] hover:bg-[#894189] px-9">
+                Life
+                <img src="images/heart.svg" alt="">
+                <span>1</span>
+            </button>
+            <button class="btn rounded-full bg-[#360490] hover:bg-[#360490] px-9">
+                Score
+                <img src="images/dollar.svg" alt="">
+                <span>1</span>
+            </button>
+        </div>
+    </section>
+  <!-- score -->
+    <section class="text-center absolute hidden ">
+        <div class="py-11 px-5 text-center border-[1px] border-[#FFFFFF33] rounded-lg space-y-4 text-white  bg-gradient-to-r from-[#FFFFFF8F] from-0% to-[#98979700] to-100%">
+            <h1 class="font-poppins text-6xl font-extrabold ">Score <span class="font-bold">:</span> <span class="font-semibold">14</span></h1>
+            <button onclick="play()" class="btn bg-white font-poppins text-black font-semibold px-8  rounded-md hover:bg-slate-400 border-none">Play Now</button>
+            <p class="text-xl font-medium">Practice will make you Pro</p>
+        </div>
+    </section>
+</main>
+<script src="alpha-clash.js"></script>
+
 </body>
 </html>
